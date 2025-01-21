@@ -93,6 +93,26 @@ header {
     width: 25px;
 }
 
+.cv {
+    display: flex;
+    justify-content: center;  /* Centre horizontalement */
+    align-items: center;       /* Centre verticalement */
+    min-height: 100vh;         /* Hauteur minimale de la page */
+    background-color: #f4f4f4; /* Arrière-plan léger */
+}
+
+.cv img {
+    max-width: 30%;            /* Réduit la taille de l'image */
+    height: auto;              /* Maintient le ratio de l'image */
+    border-radius: 15px;       /* Coins arrondis légers */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre douce */
+    transition: transform 0.3s ease-in-out; /* Effet au survol */
+}
+
+.cv img:hover {
+    transform: scale(1.1);    /* Zoom léger au survol */
+}
+
 
 @media (max-width: 992px) {
     .navbar {

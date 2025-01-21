@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="project-title">Projet</title>
+  <link rel="stylesheet" href="../../Style/style.css">
+  <link rel="stylesheet" href="../../Style/styleProjet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="liste">
+      <a href="../developpeurHomePage.html" class="active">Portfolio</a>
+      <a href="../CvHomePage.html" class="disp">CV</a>
+    </div>
+
+    <div class="titles">
+      <a href="../developpeurHomePage.html" class="title-link">GRENOT Bastien</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/bastiengrnt/" target="_blank"><img src="../../icone/linkedin.gif" alt="LinkedIn"></a>
+      <a href="https://github.com/BastienGRNT" target="_blank"><img src="../../icone/github.gif" alt="Github"></a>
+      <a href="mailto:bastien.grenot@gmail.com" target="_blank"><img src="../../icone/gmail.gif" alt="Email"></a>
+    </div>
+  </nav>
+</header>
+
+<div class="projet">
+  <div class="projet-header">
+    <h1 id="project-name"></h1>
+    <img id="project-logo" class="projet-logo" alt="Logo du projet">
+  </div>
+
+  <div class="projet-content">
+    <img id="project-image" class="projet-image" alt="Capture d'écran du projet">
+    <p id="project-description"></p>
+  </div>
+
+  <div class="projet-link">
+    <a id="project-github" target="_blank" class="github-link">
+      <img src="../../icone/github.gif" alt="Github">
+    </a>
+    <a id="project-github-text" target="_blank" class="github-link no-underline">
+      Retrouvez le projet sur Github
+    </a>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+
+    document.title = params.get("title");
+    document.getElementById("project-name").textContent = params.get("title");
+    document.getElementById("project-logo").src = params.get("languageLogo");
+    document.getElementById("project-image").src = params.get("image");
+    document.getElementById("project-description").textContent = params.get("description");
+    document.getElementById("project-github").href = params.get("github");
+    document.getElementById("project-github-text").href = params.get("github");
+  });
+</script>
+
+</body>
+</html>
